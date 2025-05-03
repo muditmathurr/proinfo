@@ -35,12 +35,12 @@ const Navbar: React.FC = () => {
             <img 
             fetchpriority="high" width="1165" height="282" 
             src="https://proinfo.io/wp-content/uploads/2024/01/proinfo-logo-hori.png" 
-            class="elementor-animation-float attachment-full size-full wp-image-882" alt="" 
+            className="elementor-animation-float attachment-full size-full wp-image-882 sm:w-[200px] w-[150px]" alt="" 
             srcset="https://proinfo.io/wp-content/uploads/2024/01/proinfo-logo-hori.png 1165w, 
             https://proinfo.io/wp-content/uploads/2024/01/proinfo-logo-hori-300x73.png 300w, 
             https://proinfo.io/wp-content/uploads/2024/01/proinfo-logo-hori-1024x248.png 1024w, 
             https://proinfo.io/wp-content/uploads/2024/01/proinfo-logo-hori-768x186.png 768w" 
-            sizes="(max-width: 1165px) 100vw, 200px"/>
+            sizes="(max-width: 576px) 150px, 200px"/>
             </a>
           </div>
 

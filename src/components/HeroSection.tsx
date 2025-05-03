@@ -9,9 +9,9 @@ const HeroSection: React.FC = () => {
     <div id="hero" className="pt-28 pb-20 md:pt-36 md:pb-28 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-        <div className="absolute -top-10 -right-10 w-72 h-72 bg-[#ffb100] opacity-10 rounded-full blur-3xl transform animate-blob"></div>
-        <div className="absolute top-40 -left-20 w-96 h-96 bg-teal-400 opacity-10 rounded-full blur-3xl transform animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-0 right-1/4 w-60 h-60 bg-coral-400 opacity-10 rounded-full blur-3xl transform animate-blob animation-delay-4000"></div>
+        <div className="absolute -top-10 -right-10 w-48 h-48 md:w-72 md:h-72 bg-[#ffb100] opacity-10 rounded-full blur-3xl transform animate-blob"></div>
+        <div className="absolute top-40 -left-10 md:-left-20 w-64 h-64 md:w-96 md:h-96 bg-teal-400 opacity-10 rounded-full blur-3xl transform animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-0 right-1/4 w-40 h-40 md:w-60 md:h-60 bg-coral-400 opacity-10 rounded-full blur-3xl transform animate-blob animation-delay-4000"></div>
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
