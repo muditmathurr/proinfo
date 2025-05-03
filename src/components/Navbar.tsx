@@ -33,10 +33,10 @@ const Navbar: React.FC = () => {
           <div className="flex items-center">
             <a href="#" className="flex items-center">
             <img 
-            fetchpriority="high" width="1165" height="282" 
+            fetchPriority="high" width="1165" height="282" 
             src="https://proinfo.io/wp-content/uploads/2024/01/proinfo-logo-hori.png" 
             className="elementor-animation-float attachment-full size-full wp-image-882 sm:w-[200px] w-[150px]" alt="" 
-            srcset="https://proinfo.io/wp-content/uploads/2024/01/proinfo-logo-hori.png 1165w, 
+            srcSet="https://proinfo.io/wp-content/uploads/2024/01/proinfo-logo-hori.png 1165w, 
             https://proinfo.io/wp-content/uploads/2024/01/proinfo-logo-hori-300x73.png 300w, 
             https://proinfo.io/wp-content/uploads/2024/01/proinfo-logo-hori-1024x248.png 1024w, 
             https://proinfo.io/wp-content/uploads/2024/01/proinfo-logo-hori-768x186.png 768w" 
@@ -49,6 +49,7 @@ const Navbar: React.FC = () => {
             <a href="#hero" className="nav-link">Home</a>
             <a href="#services" className="nav-link">Service</a>
             <a href="#about" className="nav-link">About</a>
+            <a href="#blog" className="nav-link">Blog</a>
             <a href="#contact" className="nav-link">Contact</a>
             <a href="#careers" className="nav-link">Careers</a>
             <button 
@@ -91,6 +92,7 @@ const Navbar: React.FC = () => {
           <a href="#hero" className="block py-2 nav-link" onClick={() => setIsOpen(false)}>Home</a>
           <a href="#services" className="block py-2 nav-link" onClick={() => setIsOpen(false)}>Service</a>
           <a href="#about" className="block py-2 nav-link" onClick={() => setIsOpen(false)}>About</a>
+          <a href="#blog" className="block py-2 nav-link" onClick={() => setIsOpen(false)}>Blog</a>
           <a href="#contact" className="block py-2 nav-link" onClick={() => setIsOpen(false)}>Contact</a>
           <a 
             href="#get-started" 

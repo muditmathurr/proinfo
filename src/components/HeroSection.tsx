@@ -6,6 +6,14 @@ import styles from './../styles/Button.module.css';
 const HeroSection: React.FC = () => {
   const { ref, inView } = useInView({ threshold: 0.1 });
   
+  // Sample client logos - replace with your actual client logos
+  const clientLogos = [
+    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    'https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  ];
+  
   return (
     <div id="hero" className="pt-28 pb-20 md:pt-30 md:pb-28 relative overflow-hidden">
       {/* Background Elements */}
@@ -34,7 +42,7 @@ const HeroSection: React.FC = () => {
             We pride ourselves on being at the forefront of innovation, delivering cutting-edge technology solutions across a spectrum of services.
             </p>
             
-            <div className="flex gap-4">
+            <div className="flex items-center gap-8">
               <a 
                 href="#get-started" 
                 className={styles.btn}
@@ -44,6 +52,27 @@ const HeroSection: React.FC = () => {
                   <ArrowRight size={40} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                 </span>
               </a>
+              
+              {/* Trusted Clients Section */}
+              <div className="flex items-center gap-4">
+                <div className="flex -space-x-2">
+                  {clientLogos.map((logo, index) => (
+                    <div key={index} className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-white dark:border-gray-800 shadow-sm">
+                      <img
+                        src={logo}
+                        alt={`Client ${index + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+                <a 
+                  href="#testimonials" 
+                  className="text-sm text-[#ffb100] hover:text-[#ffb100]/80 transition-colors"
+                >
+                  View Testimonials →
+                </a>
+              </div>
             </div>
           </div>
           
