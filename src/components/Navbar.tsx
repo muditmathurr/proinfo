@@ -49,8 +49,8 @@ const Navbar: React.FC = () => {
             <a href="#hero" className="nav-link">Home</a>
             <a href="#services" className="nav-link">Service</a>
             <a href="#about" className="nav-link">About</a>
-            <a href="#careers" className="nav-link">Careers</a>
             <a href="#contact" className="nav-link">Contact</a>
+            <a href="#careers" className="nav-link">Careers</a>
             <button 
               onClick={toggleTheme}
               className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"

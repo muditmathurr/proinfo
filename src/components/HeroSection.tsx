@@ -1,12 +1,13 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
+import styles from './../styles/Button.module.css';
 
 const HeroSection: React.FC = () => {
   const { ref, inView } = useInView({ threshold: 0.1 });
   
   return (
-    <div id="hero" className="pt-28 pb-20 md:pt-36 md:pb-28 relative overflow-hidden">
+    <div id="hero" className="pt-28 pb-20 md:pt-30 md:pb-28 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
         <div className="absolute -top-10 -right-10 w-48 h-48 md:w-72 md:h-72 bg-[#ffb100] opacity-10 rounded-full blur-3xl transform animate-blob"></div>
@@ -16,7 +17,7 @@ const HeroSection: React.FC = () => {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div 
-          ref={ref} 
+          ref={ref as React.RefObject<HTMLDivElement>} 
           className={`grid grid-cols-1 lg:grid-cols-2 gap-12 transition-all duration-1000 transform ${
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
@@ -27,7 +28,6 @@ const HeroSection: React.FC = () => {
               <span className="text-[#2a2930] dark:text-gray-300">
               Welcome to <span className="text-[#ffb100]">Proinfo</span> Where Innovation Meets Excellence!
               </span>
-              
             </h1>
             
             <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
@@ -37,12 +37,13 @@ const HeroSection: React.FC = () => {
             <div className="flex gap-4">
               <a 
                 href="#get-started" 
-                className="bg-[#ffb100] text-black from-purple-600 to-teal-500 hover:from-purple-700 hover:to-teal-600 text-white font-medium py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2 group"
+                className={styles.btn}
               >
-                Read More
-                <ArrowRight size={20} className="transition-transform duration-300 group-hover:translate-x-1" />
+                <span className={styles.btnContent}>Read More</span>
+                <span className={styles.icon}>
+                  <ArrowRight size={40} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                </span>
               </a>
-             
             </div>
           </div>
           
@@ -78,10 +79,9 @@ const HeroSection: React.FC = () => {
               </div>
             </div>
           </div>
-          </div>
         </div>
       </div>
-    
+    </div>
   );
 };
 
