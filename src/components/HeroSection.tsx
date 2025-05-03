@@ -42,7 +42,7 @@ const HeroSection: React.FC = () => {
             We pride ourselves on being at the forefront of innovation, delivering cutting-edge technology solutions across a spectrum of services.
             </p>
             
-            <div className="flex items-center gap-8">
+            <div className="flex flex-col sm:flex-row items-center gap-8">
               <a 
                 href="#get-started" 
                 className={styles.btn}
