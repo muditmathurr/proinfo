@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans antialiased;
+  }
+  
+  :root {
+    --color-purple-50: 250 245 255;
+    --color-purple-100: 243 232 255;
+    --color-purple-200: 233 213 255;
+    --color-purple-300: 216 180 254;
+    --color-purple-400: 192 132 252;
+    --color-purple-500: 168 85 247;
+    --color-purple-600: 147 51 234;
+    --color-purple-700: 126 34 206;
+    --color-purple-800: 107 33 168;
+    --color-purple-900: 88 28 135;
+    --color-purple-950: 59 7 100;
+    
+    --color-teal-50: 240 253 250;
+    --color-teal-100: 204 251 241;
+    --color-teal-200: 153 246 228;
+    --color-teal-300: 94 234 212;
+    --color-teal-400: 45 212 191;
+    --color-teal-500: 20 184 166;
+    --color-teal-600: 13 148 136;
+    --color-teal-700: 15 118 110;
+    --color-teal-800: 17 94 89;
+    --color-teal-900: 19 78 74;
+    --color-teal-950: 4 47 46;
+    
+    --color-coral-50: 255 241 242;
+    --color-coral-100: 255 228 230;
+    --color-coral-200: 254 205 211;
+    --color-coral-300: 253 164 175;
+    --color-coral-400: 251 113 133;
+    --color-coral-500: 244 63 94;
+    --color-coral-600: 225 29 72;
+    --color-coral-700: 190 18 60;
+    --color-coral-800: 159 18 57;
+    --color-coral-900: 136 19 55;
+    --color-coral-950: 76 5 25;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-gray-600 dark:text-gray-300 hover:text-[#ffb100] dark:hover:text-[#ffb100] transition-colors;
+  }
+  
+  .animate-reveal {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+  
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}

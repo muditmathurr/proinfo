@@ -1,0 +1,63 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: [
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica Neue',
+          'Arial',
+          'sans-serif',
+        ],
+      },
+      colors: {
+        purple: {
+          50: 'rgb(var(--color-purple-50) / <alpha-value>)',
+          100: 'rgb(var(--color-purple-100) / <alpha-value>)',
+          200: 'rgb(var(--color-purple-200) / <alpha-value>)',
+          300: 'rgb(var(--color-purple-300) / <alpha-value>)',
+          400: 'rgb(var(--color-purple-400) / <alpha-value>)',
+          500: 'rgb(var(--color-purple-500) / <alpha-value>)',
+          600: 'rgb(var(--color-purple-600) / <alpha-value>)',
+          700: 'rgb(var(--color-purple-700) / <alpha-value>)',
+          800: 'rgb(var(--color-purple-800) / <alpha-value>)',
+          900: 'rgb(var(--color-purple-900) / <alpha-value>)',
+          950: 'rgb(var(--color-purple-950) / <alpha-value>)',
+        },
+        teal: {
+          50: 'rgb(var(--color-teal-50) / <alpha-value>)',
+          100: 'rgb(var(--color-teal-100) / <alpha-value>)',
+          200: 'rgb(var(--color-teal-200) / <alpha-value>)',
+          300: 'rgb(var(--color-teal-300) / <alpha-value>)',
+          400: 'rgb(var(--color-teal-400) / <alpha-value>)',
+          500: 'rgb(var(--color-teal-500) / <alpha-value>)',
+          600: 'rgb(var(--color-teal-600) / <alpha-value>)',
+          700: 'rgb(var(--color-teal-700) / <alpha-value>)',
+          800: 'rgb(var(--color-teal-800) / <alpha-value>)',
+          900: 'rgb(var(--color-teal-900) / <alpha-value>)',
+          950: 'rgb(var(--color-teal-950) / <alpha-value>)',
+        },
+        coral: {
+          50: 'rgb(var(--color-coral-50) / <alpha-value>)',
+          100: 'rgb(var(--color-coral-100) / <alpha-value>)',
+          200: 'rgb(var(--color-coral-200) / <alpha-value>)',
+          300: 'rgb(var(--color-coral-300) / <alpha-value>)',
+          400: 'rgb(var(--color-coral-400) / <alpha-value>)',
+          500: 'rgb(var(--color-coral-500) / <alpha-value>)',
+          600: 'rgb(var(--color-coral-600) / <alpha-value>)',
+          700: 'rgb(var(--color-coral-700) / <alpha-value>)',
+          800: 'rgb(var(--color-coral-800) / <alpha-value>)',
+          900: 'rgb(var(--color-coral-900) / <alpha-value>)',
+          950: 'rgb(var(--color-coral-950) / <alpha-value>)',
+        },
+      },
+    },
+  },
+  plugins: [],
+};
