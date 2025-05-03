@@ -5,6 +5,7 @@ import ServicesSection from './components/ServicesSection';
 import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import ThemeProvider from './context/ThemeContext';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <ContactSection />
         </main>
         <Footer />
+        <ScrollToTop />
       </div>
     </ThemeProvider>
   );
