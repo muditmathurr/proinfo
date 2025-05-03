@@ -61,7 +61,7 @@ const ContactSection: React.FC = () => {
           <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
           <div className="w-24 h-1 bg-[#ffb100] from-purple-600 to-teal-500 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 dark:text-gray-300">
-            Have questions or need a customized security solution? Contact us today.
+            Have questions or need a customized solution? Contact us today.
           </p>
         </div>
         
