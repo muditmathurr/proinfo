@@ -188,7 +188,7 @@ const Footer: React.FC = () => {
 
       {/* Brand Name */}
       <div className="absolute bottom-0 left-0 w-full text-center py-4">
-        <span className="text-8xl font-black text-white opacity-20 tracking-wider">PRO<span className="text-orange-600">INFO</span></span>
+        <span className="text-4xl sm:text-8xl font-black text-white opacity-20 tracking-wider">PRO<span className="text-orange-600">INFO</span></span>
       </div>
 
       {/* Back to Top Button */}
