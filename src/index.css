@@ -52,7 +52,7 @@
 
 @layer components {
   .nav-link {
-    @apply text-gray-600 dark:text-gray-300 hover:text-[#ffb100] dark:hover:text-[#ffb100] transition-colors;
+    @apply text-gray-600 dark:text-gray-300 hover:text-[#FB8C00] dark:hover:text-[#FB8C00] transition-colors;
   }
   
   .animate-reveal {

@@ -2,6 +2,8 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 import styles from './../styles/Button.module.css';
+import heroStyles from './HeroSection.module.css';
+import StarryBackground from './StarryBackground';
 
 const HeroSection: React.FC = () => {
   const { ref, inView } = useInView({ threshold: 0.1 });
@@ -15,34 +17,41 @@ const HeroSection: React.FC = () => {
   ];
   
   return (
-    <div id="hero" className="pt-28 pb-20 md:pt-30 md:pb-28 relative overflow-hidden">
+    <div id="hero" className={`pt-20 min-h-[calc(100vh-1px)] flex items-center relative overflow-hidden ${heroStyles.heroBackground}`}>
+      <div className={heroStyles.sliderThumb}></div>
+      <StarryBackground />
+      
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-        <div className="absolute -top-10 -right-10 w-48 h-48 md:w-72 md:h-72 bg-[#ffb100] opacity-10 rounded-full blur-3xl transform animate-blob"></div>
-        <div className="absolute top-40 -left-10 md:-left-20 w-64 h-64 md:w-96 md:h-96 bg-teal-400 opacity-10 rounded-full blur-3xl transform animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-0 right-1/4 w-40 h-40 md:w-60 md:h-60 bg-coral-400 opacity-10 rounded-full blur-3xl transform animate-blob animation-delay-4000"></div>
+        {/* <div className="absolute -top-10 -right-10 w-48 h-48 md:w-72 md:h-72 bg-[#FB8C00] opacity-10 rounded-full blur-3xl transform animate-blob"></div> */}
+        {/* <div className="absolute top-40 -left-10 md:-left-20 w-64 h-64 md:w-96 md:h-96 bg-teal-400 opacity-10 rounded-full blur-3xl transform animate-blob animation-delay-2000"></div> */}
+        {/* <div className="absolute bottom-0 right-1/4 w-40 h-40 md:w-60 md:h-60 bg-coral-400 opacity-10 rounded-full blur-3xl transform animate-blob animation-delay-4000"></div> */}
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div 
           ref={ref as React.RefObject<HTMLDivElement>} 
-          className={`grid grid-cols-1 lg:grid-cols-2 gap-12 transition-all duration-1000 transform ${
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center transition-all duration-1000 transform ${
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
           {/* Left Section with Text */}
-          <div className="flex flex-col justify-center">
-            <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-8">
-              <span className="text-[#2a2930] dark:text-gray-300">
-              Welcome to <span className="text-[#ffb100]">Proinfo</span> Where Innovation Meets Excellence!
+          <div className="flex flex-col justify-center py-8 lg:py-0">
+            <h1 className="text-5xl sm:text-6xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 lg:mb-8">
+              <span className="text-white">
+                Welcome to <span className="text-orange-600">Proinfo</span>
+                <br />
+                Where Innovation
+                <br />
+                Meets Excellence!
               </span>
             </h1>
             
-            <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
-            We pride ourselves on being at the forefront of innovation, delivering cutting-edge technology solutions across a spectrum of services.
+            <p className="text-lg sm:text-xl text-white leading-relaxed mb-8 lg:mb-12">
+              We pride ourselves on being at the forefront of innovation, delivering cutting-edge technology solutions across a spectrum of services.
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center gap-8">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 lg:gap-8">
               <a 
                 href="#get-started" 
                 className={styles.btn}
@@ -57,7 +66,7 @@ const HeroSection: React.FC = () => {
               <div className="flex items-center gap-4">
                 <div className="flex -space-x-2">
                   {clientLogos.map((logo, index) => (
-                    <div key={index} className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-white dark:border-gray-800 shadow-sm">
+                    <div key={index} className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-white dark:border-gray-800 shadow-sm">
                       <img
                         src={logo}
                         alt={`Client ${index + 1}`}
@@ -68,7 +77,7 @@ const HeroSection: React.FC = () => {
                 </div>
                 <a 
                   href="#testimonials" 
-                  className="text-sm text-[#ffb100] hover:text-[#ffb100]/80 transition-colors"
+                  className="text-sm sm:text-base text-white hover:text-orange-600/80 transition-colors"
                 >
                   View Testimonials →
                 </a>
@@ -77,7 +86,7 @@ const HeroSection: React.FC = () => {
           </div>
           
           {/* Right Section with Video */}
-          <div className="relative h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] rounded-2xl overflow-hidden shadow-2xl">
             <video 
               className="absolute inset-0 w-full h-full object-cover"
               autoPlay
@@ -87,28 +96,23 @@ const HeroSection: React.FC = () => {
               src="https://proinfo.io/wp-content/uploads/2024/10/3249940-uhd_3840_2160_25fps.mp4#t=0.1"
             >
             </video>
-            <div className="elementor-container elementor-column-gap-no">
-              <div className="elementor-column elementor-col-100 elementor-top-column elementor-element">
-                <div className="elementor-widget-wrap elementor-element-populated">
-                  <div className="elementor-widget-container">
-                    <h3 className="elementor-heading-title elementor-size-default">
-                      Welcome to <span className="text-white">Proinfo</span>
-                      <br />Where Innovation Meets Excellence!
-                    </h3>
-                  </div>
-                  <div className="elementor-widget-container">
-                    <p>We pride ourselves on being at the forefront of innovation, delivering cutting-edge technology solutions across a spectrum of services.</p>
-                  </div>
-                  <div className="elementor-button-wrapper">
-                    <a className="elementor-button elementor-size-sm" href="#about">
-                      <span className="elementor-button-text">Read More</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <svg 
+          className="w-6 h-6 text-white" 
+          fill="none" 
+          strokeLinecap="round" 
+          strokeLinejoin="round" 
+          strokeWidth="2" 
+          viewBox="0 0 24 24" 
+          stroke="currentColor"
+        >
+          <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
       </div>
     </div>
   );

@@ -49,7 +49,7 @@ const BlogSection: React.FC = () => {
                                 <p className="text-gray-600 dark:text-gray-300 mb-4">{post.excerpt}</p>
                                 <a
                                     href="#"
-                                    className="inline-flex items-center text-[#ffb100] hover:text-[#ffb100]/80 transition-colors"
+                                    className="inline-flex items-center text-[#FB8C00] hover:text-[#FB8C00]/80 transition-colors"
                                 >
                                     Read More
                                     <svg

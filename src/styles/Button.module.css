@@ -1,7 +1,7 @@
 .btn {
     border-radius: 4px;
-    border: 2px solid #ffb100;
-    color: #ffb100;
+    border: 2px solid #FB8C00;
+    color: #FB8C00;
     display: inline-block;
     margin: 0 .25em;
     overflow: hidden;
@@ -23,7 +23,7 @@
 }
 
 .icon {
-    border-left: 1px solid #ffb100;
+    border-left: 1px solid #FB8C00;
     position: absolute;
     right: 0;
     text-align: center;
@@ -47,7 +47,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: #ffb100;
+    background-color: #FB8C00;
     opacity: 0;
     transition: opacity 300ms ease;
 }

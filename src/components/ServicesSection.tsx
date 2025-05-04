@@ -15,14 +15,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, del
   return (
     <div 
       ref={ref}
-      className={`bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl p-8 transition-all duration-500 transform hover:-translate-y-2 border-2 border-transparent hover:border-[#ffb100] ${
+      className={`bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl p-8 transition-all duration-500 transform hover:-translate-y-2 border-2 border-transparent hover:border-[#FB8C00] ${
         inView 
           ? 'opacity-100 translate-y-0' 
           : 'opacity-0 translate-y-10'
       }`}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className="w-16 h-16 mb-6 bg-gray-900 dark:bg-gradient-to-br from-purple-500/20 to-teal-500/20 rounded-2xl flex items-center justify-center text-[#ffb100] dark:text-[#ffb100] group-hover:from-purple-500/30 group-hover:to-teal-500/30 transition-all duration-300">
+      <div className="w-16 h-16 mb-6 bg-gray-900 dark:bg-gradient-to-br from-purple-500/20 to-teal-500/20 rounded-2xl flex items-center justify-center text-[#FB8C00] dark:text-[#FB8C00] group-hover:from-purple-500/30 group-hover:to-teal-500/30 transition-all duration-300">
         {icon}
       </div>
       <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">{title}</h3>
@@ -83,7 +83,7 @@ const ServicesSection: React.FC = () => {
           }`}
         >
           <h2 className="text-3xl font-bold mb-4">The Best Services We Provide</h2>
-          <div className="w-24 h-1 bg-[#ffb100] from-purple-600 to-teal-500 mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-[#FB8C00] from-purple-600 to-teal-500 mx-auto mb-6"></div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

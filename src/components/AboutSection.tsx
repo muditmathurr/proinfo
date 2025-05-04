@@ -19,7 +19,7 @@ const Stat: React.FC<StatProps> = ({ icon, value, label, delay }) => {
         }`}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className="w-16 h-16 bg-[#2a2930] dark:bg-purple-900/30 rounded-full flex items-center justify-center text-[#ffb100] dark:text-[#ffb100] mb-4">
+      <div className="w-16 h-16 bg-[#2a2930] dark:bg-purple-900/30 rounded-full flex items-center justify-center text-[#FB8C00] dark:text-[#FB8C00] mb-4">
         {icon}
       </div>
       <span className="text-3xl font-bold mb-2">{value}</span>
@@ -70,7 +70,7 @@ const AboutSection: React.FC = () => {
             }`}
             >
             <h2 className="text-3xl font-bold mb-6">About ProInfo Technology</h2>
-            <div className="w-24 h-1 bg-[#ffb100] from-purple-600 to-teal-500 mb-6"></div>
+            <div className="w-24 h-1 bg-[#FB8C00] from-purple-600 to-teal-500 mb-6"></div>
             <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
               At ProInfo Technologies, we pride ourselves on being at the forefront of innovation, delivering cutting-edge technology solutions across a spectrum of services. With a commitment to excellence, we leverage our expertise in Cloud Solutions, Consulting, Cybersecurity, No Code, and Low Code to empower businesses globally.
             </p>
@@ -81,7 +81,7 @@ const AboutSection: React.FC = () => {
             <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
               At ProInfo Technologies, we are more than just a technology firm; we are architects of digital transformation, pioneers of innovation, and partners in your journey towards success. Established with a vision to redefine the technological landscape, we bring over a decade of global experience to the table.
             </p>
-            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg border-l-4 border-[#ffb100] mb-8">
+            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg border-l-4 border-[#FB8C00] mb-8">
               <p className="text-gray-700 dark:text-gray-200 italic">
                 "ProInfo transformed our security posture and gave us confidence that our
                 sensitive data is protected. Their team's expertise is unmatched."
@@ -91,7 +91,7 @@ const AboutSection: React.FC = () => {
 
             <a
               href="#contact"
-              className="inline-block bg-[#ffb100] from-purple-600 to-teal-500 hover:from-purple-700 hover:to-teal-600 text-white font-medium py-3 px-8 rounded transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:bg-[#2a2930]"
+              className="inline-block bg-[#FB8C00] from-purple-600 to-teal-500 hover:from-purple-700 hover:to-teal-600 text-white font-medium py-3 px-8 rounded transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:bg-[#2a2930]"
               >
               Get in Touch
             </a>
@@ -131,7 +131,7 @@ const AboutSection: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto mb-16">
           <div className="flex items-center justify-center gap-2 mb-2">
-            <span className="w-2 h-2 bg-[#ffb100] rounded-full"></span>
+            <span className="w-2 h-2 bg-[#FB8C00] rounded-full"></span>
             <span className="tracking-widest text-sm font-semibold">OUR CORE COMPETENCIES</span>
           </div>
           <h2 className="text-4xl font-bold mb-4">Scalability, Flexibility, and Efficiency</h2>
