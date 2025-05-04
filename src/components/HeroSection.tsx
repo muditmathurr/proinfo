@@ -17,15 +17,15 @@ const HeroSection: React.FC = () => {
   ];
   
   return (
-    <div id="hero" className={`pt-20 min-h-[calc(100vh-1px)] flex items-center relative overflow-hidden ${heroStyles.heroBackground}`}>
+    <div id="hero" className={`pt-24 sm:pt-28 md:pt-32 min-h-[120vh] sm:min-h-screen w-full flex items-center relative overflow-hidden ${heroStyles.heroBackground}`}>
       <div className={heroStyles.sliderThumb}></div>
       <StarryBackground />
       
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-        {/* <div className="absolute -top-10 -right-10 w-48 h-48 md:w-72 md:h-72 bg-[#FB8C00] opacity-10 rounded-full blur-3xl transform animate-blob"></div> */}
-        {/* <div className="absolute top-40 -left-10 md:-left-20 w-64 h-64 md:w-96 md:h-96 bg-teal-400 opacity-10 rounded-full blur-3xl transform animate-blob animation-delay-2000"></div> */}
-        {/* <div className="absolute bottom-0 right-1/4 w-40 h-40 md:w-60 md:h-60 bg-coral-400 opacity-10 rounded-full blur-3xl transform animate-blob animation-delay-4000"></div> */}
+        {/* <div className="absolute -top-10 -right-10 w-48 h-48 md:w-72 md:h-72 bg-[#FB8C00] opacity-10 rounded-full blur-3xl transform animate-blob"></div>
+        <div className="absolute top-40 -left-10 md:-left-20 w-64 h-64 md:w-96 md:h-96 bg-teal-400 opacity-10 rounded-full blur-3xl transform animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-0 right-1/4 w-40 h-40 md:w-60 md:h-60 bg-coral-400 opacity-10 rounded-full blur-3xl transform animate-blob animation-delay-4000"></div> */}
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -36,25 +36,25 @@ const HeroSection: React.FC = () => {
           }`}
         >
           {/* Left Section with Text */}
-          <div className="flex flex-col justify-center py-8 lg:py-0">
-            <h1 className="text-5xl sm:text-6xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 lg:mb-8">
+          <div className="flex flex-col justify-center py-8 lg:py-0 text-center lg:text-left mt-8">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-4 sm:mb-6 lg:mb-8">
               <span className="text-white">
                 Welcome to <span className="text-orange-600">Proinfo</span>
-                <br />
+                <br className="hidden sm:block" />
                 Where Innovation
-                <br />
+                <br className="hidden sm:block" />
                 Meets Excellence!
               </span>
             </h1>
             
-            <p className="text-lg sm:text-xl text-white leading-relaxed mb-8 lg:mb-12">
+            <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed mb-6 sm:mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0">
               We pride ourselves on being at the forefront of innovation, delivering cutting-edge technology solutions across a spectrum of services.
             </p>
             
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 lg:gap-8">
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 lg:gap-8">
               <a 
                 href="#get-started" 
-                className={styles.btn}
+                className={`${styles.btn} w-full sm:w-auto`}
               >
                 <span className={styles.btnContent}>Read More</span>
                 <span className={styles.icon}>
@@ -63,10 +63,10 @@ const HeroSection: React.FC = () => {
               </a>
               
               {/* Trusted Clients Section */}
-              <div className="flex items-center gap-4">
+              <div className="flex flex-col sm:flex-row items-center gap-4">
                 <div className="flex -space-x-2">
                   {clientLogos.map((logo, index) => (
-                    <div key={index} className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-white dark:border-gray-800 shadow-sm">
+                    <div key={index} className="relative w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-2 border-white dark:border-gray-800 shadow-sm">
                       <img
                         src={logo}
                         alt={`Client ${index + 1}`}
@@ -86,7 +86,7 @@ const HeroSection: React.FC = () => {
           </div>
           
           {/* Right Section with Video */}
-          <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative h-[250px] sm:h-[350px] md:h-[400px] lg:h-[500px] xl:h-[600px] rounded-2xl overflow-hidden shadow-2xl mb-12 sm:mb-20">
             <video 
               className="absolute inset-0 w-full h-full object-cover"
               autoPlay
@@ -101,9 +101,9 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <svg 
-          className="w-6 h-6 text-white" 
+          className="w-5 h-5 sm:w-6 sm:h-6 text-white" 
           fill="none" 
           strokeLinecap="round" 
           strokeLinejoin="round" 
