@@ -152,7 +152,7 @@ const Navbar: React.FC = () => {
           {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
-            className={`p-2 ml-8 rounded-full hover:bg-orange-400 transition-colors ${isScrolled ? 'text-black' : 'text-blak'}`}
+            className={`p-2 ml-8 rounded-full hover:bg-orange-400 transition-colors ${isScrolled && !isDark ? 'text-black' : 'text-white'}`}
             aria-label="Toggle theme"
           >
             {isDark ? <Sun size={20} /> : <Moon size={20} />}

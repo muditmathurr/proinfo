@@ -20,13 +20,13 @@ const HeroSection = () => {
 
   // Animated icons data
   const animatedIcons = [
-    { Icon: AppWindow, delay: '0.5s', position: 'top-[10%] right-[15%] sm:top-[15%] sm:right-[20%]', bgColor: 'bg-white/70' },
-    { Icon: Cloud, delay: '1s', position: 'top-[30%] left-[5%] sm:top-[35%] sm:left-[18%]', bgColor: 'bg-white/70' },
-    { Icon: Database, delay: '1.5s', position: 'top-[43%] right-[8%] sm:top-[47%] sm:right-[22%]', bgColor: 'bg-white/70' },
-    { Icon: Cpu, delay: '2s', position: 'bottom-[40%] left-[3%] sm:bottom-[30%] sm:left-[22%]', bgColor: 'bg-white/70' },
-    { Icon: Code, delay: '2.5s', position: 'top-[70%] right-[18%] sm:top-[70%] sm:right-[26%]', bgColor: 'bg-white/70' },
-    { Icon: Zap, delay: '3s', position: 'top-[16%] left-[20%] sm:top-[15%] sm:left-[40%]', bgColor: 'bg-white/70' },
-    { Icon: Rocket, delay: '3.5s', position: 'bottom-[20%] left-[30%] sm:bottom-[15%] sm:left-[50%]', bgColor: 'bg-white/70' },
+    { Icon: AppWindow, delay: '0.5s', position: 'top-[10%] right-[15%] sm:top-[15%] sm:right-[20%]', bgColor: 'bg-white/70 dark:bg-gray-800/70' },
+    { Icon: Cloud, delay: '1s', position: 'top-[30%] left-[5%] sm:top-[35%] sm:left-[18%]', bgColor: 'bg-white/70 dark:bg-gray-800/70' },
+    { Icon: Database, delay: '1.5s', position: 'top-[43%] right-[8%] sm:top-[47%] sm:right-[22%]', bgColor: 'bg-white/70 dark:bg-gray-800/70' },
+    { Icon: Cpu, delay: '2s', position: 'bottom-[40%] left-[3%] sm:bottom-[30%] sm:left-[22%]', bgColor: 'bg-white/70 dark:bg-gray-800/70' },
+    { Icon: Code, delay: '2.5s', position: 'top-[70%] right-[18%] sm:top-[70%] sm:right-[26%]', bgColor: 'bg-white/70 dark:bg-gray-800/70' },
+    { Icon: Zap, delay: '3s', position: 'top-[16%] left-[20%] sm:top-[15%] sm:left-[40%]', bgColor: 'bg-white/70 dark:bg-gray-800/70' },
+    { Icon: Rocket, delay: '3.5s', position: 'bottom-[20%] left-[30%] sm:bottom-[15%] sm:left-[50%]', bgColor: 'bg-white/70 dark:bg-gray-800/70' },
    
   ];
   
@@ -66,7 +66,7 @@ const HeroSection = () => {
         >
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-3 sm:mb-4 md:mb-6 lg:mb-8">
-              <span className="text-black">
+              <span className="text-black dark:text-white">
                 <span className="block max-w-[20ch] mx-auto">
                   Welcome to <span className="text-orange-600"><TypewriterText text="PROINFO..." /></span>
                 </span>
@@ -74,8 +74,7 @@ const HeroSection = () => {
                 <span className="block mx-auto ">Meets Excellence!</span>
               </span>
             </h1>
-            
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black leading-relaxed mb-4 sm:mb-6 lg:mb-8 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black leading-relaxed mb-4 sm:mb-6 lg:mb-8 max-w-2xl mx-auto dark:text-white">
               We pride ourselves on being at the forefront of innovation, delivering cutting-edge technology solutions across a spectrum of services.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-12 mx-auto">
@@ -121,7 +120,7 @@ const HeroSection = () => {
       {/* Scroll Indicator */}
       <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <svg 
-          className="w-5 h-5 sm:w-6 sm:h-6 text-black" 
+          className="w-5 h-5 sm:w-6 sm:h-6 text-black dark:text-white" 
           fill="none" 
           strokeLinecap="round" 
           strokeLinejoin="round" 
