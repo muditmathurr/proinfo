@@ -25,7 +25,7 @@ const HeroSection: React.FC = () => {
   ];
   
   return (
-    <div id="hero" className={`pb-12 sm:pt-28 md:pt-32 min-h-[110vh] sm:min-h-screen w-full flex items-center relative overflow-hidden ${heroStyles.heroBackground}`}>
+    <div id="hero" className={`pb-20 sm:pt-28 md:pt-32 min-h-[110vh] sm:min-h-screen w-full flex items-center relative overflow-hidden ${heroStyles.heroBackground}`}>
       <div className={heroStyles.sliderThumb}></div>
       <StarryBackground />
       
