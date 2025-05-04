@@ -50,16 +50,16 @@ const HeroSection: React.FC = () => {
         >
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-3 sm:mb-4 md:mb-6 lg:mb-8">
-              <span className="text-white">
+              <span className="text-[#eeeeff]">
                 <span className="block max-w-[18ch] mx-auto">
                   Welcome to <span className="text-orange-600"><TypewriterText text="Proinfo..." /></span>
                 </span>
-                <span className="block max-w-[16ch] mx-auto">Where Innovation</span>
-                <span className="block mx-auto">Meets Excellence!</span>
+                <span className="block max-w-[16ch] mx-auto text-[#eeeeff]">Where Innovation</span>
+                <span className="block mx-auto text-[#eeeeff]">Meets Excellence!</span>
               </span>
             </h1>
             
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white leading-relaxed mb-4 sm:mb-6 lg:mb-8 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#eeeeff] leading-relaxed mb-4 sm:mb-6 lg:mb-8 max-w-2xl mx-auto">
               We pride ourselves on being at the forefront of innovation, delivering cutting-edge technology solutions across a spectrum of services.
             </p>
             
@@ -68,7 +68,7 @@ const HeroSection: React.FC = () => {
                 href="#get-started" 
                 className={`${styles.btn}  sm:w-auto text-sm sm:text-base md:text-lg`}
               >
-                <span className={styles.btnContent}>Read More</span>
+                <span className={styles.btnContent}><strong>Read More</strong></span>
                 <span className={styles.icon}>
                   <ArrowRight size={24} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:w-8 sm:h-8 md:w-10 md:h-10" />
                 </span>
@@ -89,7 +89,7 @@ const HeroSection: React.FC = () => {
                 </div>
                 <a 
                   href="#testimonials" 
-                  className="text-sm sm:text-base text-white hover:text-orange-600/80 transition-colors"
+                  className="text-sm sm:text-base text-white hover:text-orange-600/80 transition-colors font-bold"
                 >
                   View Testimonials
                 </a>

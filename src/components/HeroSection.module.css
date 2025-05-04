@@ -21,7 +21,7 @@
     top: 30%;
     width: 350px;
     height: 300px;
-    background: #17141d;
+    background: #0d1d3f;
     border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
     will-change: border-radius, transform, opacity;
     animation: sliderShape 5s linear infinite;
