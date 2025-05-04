@@ -152,7 +152,7 @@ const Navbar: React.FC = () => {
           {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
-            className={`p-2 ml-8 rounded-full hover:bg-orange-400 transition-colors ${isScrolled && !isDark ? 'text-black' : 'text-white'}`}
+            className={`p-2 ml-8 rounded-full hover:bg-orange-400 transition-colors ${isDark ? 'text-white' : 'text-black'}`}
             aria-label="Toggle theme"
           >
             {isDark ? <Sun size={20} /> : <Moon size={20} />}
@@ -163,7 +163,7 @@ const Navbar: React.FC = () => {
         <div className="flex items-center space-x-4 md:hidden">
           <button
             onClick={toggleTheme}
-            className={`p-2 rounded-full hover:bg-orange-400 dark:hover:bg-gray-700 transition-colors ${isScrolled ? 'text-black dark:text-white' : 'text-black dark:text-white'}`}
+            className={`p-2 rounded-full hover:bg-orange-400 dark:hover:bg-gray-700 transition-colors ${isDark ? 'text-white' : 'text-black'}`}
             aria-label="Toggle theme"
           >
             {isDark ? <Sun size={20} /> : <Moon size={20} />}
