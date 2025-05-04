@@ -4,6 +4,7 @@ import { useInView } from '../hooks/useInView';
 import styles from './../styles/Button.module.css';
 import heroStyles from './HeroSection.module.css';
 import StarryBackground from './StarryBackground';
+import TypewriterText from './TypewriterText';
 
 const HeroSection: React.FC = () => {
   const { ref, inView } = useInView({ threshold: 0.1 });
@@ -48,17 +49,17 @@ const HeroSection: React.FC = () => {
           }`}
         >
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-4 sm:mb-6 lg:mb-8">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-3 sm:mb-4 md:mb-6 lg:mb-8">
               <span className="text-white">
-                Welcome to <span className="text-orange-600">Proinfo</span>
-                <br className="hidden sm:block" />
-                Where Innovation
-                <br className="hidden sm:block" />
-                Meets Excellence!
+                <span className="block max-w-[18ch] mx-auto">
+                  Welcome to <span className="text-orange-600"><TypewriterText text="Proinfo..." /></span>
+                </span>
+                <span className="block max-w-[16ch] mx-auto">Where Innovation</span>
+                <span className="block mx-auto">Meets Excellence!</span>
               </span>
             </h1>
             
-            <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed mb-6 sm:mb-8 lg:mb-12 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white leading-relaxed mb-4 sm:mb-6 lg:mb-8 max-w-2xl mx-auto">
               We pride ourselves on being at the forefront of innovation, delivering cutting-edge technology solutions across a spectrum of services.
             </p>
             
