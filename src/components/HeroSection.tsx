@@ -34,7 +34,7 @@ const HeroSection: React.FC = () => {
       {animatedIcons.map(({ Icon, delay, position }, index) => (
         <div
           key={index}
-          className={`absolute ${position} w-12 h-12 rounded-full bg-orange-600/20 flex items-center justify-center animate-float`}
+          className={`absolute ${position} w-12 h-12 rounded-full bg-orange-600/20 flex items-center justify-center animate-float sm:right-[25%] right-[7%] ${index === 0 ? 'sm:top-1/4 top-[15%]' : ''}`}
           style={{ animationDelay: delay }}
         >
           <Icon className="w-6 h-6 text-orange-600" />
