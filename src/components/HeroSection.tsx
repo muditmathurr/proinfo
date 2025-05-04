@@ -24,17 +24,17 @@ const HeroSection = () => {
     { 
       Icon: () => <img src="https://cdn-icons-png.flaticon.com/512/9382/9382645.png" alt="Blockchain" className="w-8 h-8 sm:w-10 sm:h-10" />,
       delay: '4s',
-      position: 'bottom-[25%] right-[20%] sm:bottom-[10%] sm:right-[35%]',
+      position: 'bottom-[20%] right-[30%] sm:bottom-[10%] sm:right-[35%]',
       bgColor: 'bg-white/70 dark:bg-gray-800/70'
     },
     {
       Icon: () => <img src="https://cdn-icons-png.flaticon.com/512/2906/2906220.png" alt="Database Storage" className="w-6 h-6 sm:w-10 sm:h-10" />,
       delay: '4.5s', 
-      position: 'top-[15%] right-[12%] sm:top-[15%] sm:right-[30%]',
+      position: 'top-[15%] right-[8%] sm:top-[15%] sm:right-[30%]',
       bgColor: 'bg-white/70 dark:bg-gray-800/70'
     },
     {
-      Icon: () => <img src="https://cdn-icons-png.flaticon.com/512/2906/2906274.png" alt="Cloud Storage" className="w-6 h-6 sm:w-10 sm:h-10" />,
+      Icon: () => <img src="https://cdn-icons-png.flaticon.com/512/2906/2906274.png" alt="Cloud Storage" className="w-8 h-8 sm:w-10 sm:h-10" />,
       delay: '5s',
       position: 'bottom-[20%] left-[10%] sm:bottom-[35%] sm:left-[12%]', 
       bgColor: 'bg-white/70 dark:bg-gray-800/70'
@@ -42,13 +42,13 @@ const HeroSection = () => {
     {
       Icon: () => <img src="https://cdn-icons-png.flaticon.com/512/11125/11125966.png" alt="Quality Assurance" className="w-8 h-8 sm:w-10 sm:h-10" />,
       delay: '5.5s',
-      position: 'top-[20%] left-[15%] sm:top-[15%] sm:left-[25%]',
+      position: 'top-[15%] left-[10%] sm:top-[15%] sm:left-[25%]',
       bgColor: 'bg-white/70 dark:bg-gray-800/70'
     },
     {
       Icon: () => <img src="https://cdn-icons-png.flaticon.com/512/9692/9692936.png" alt="Cloud Services" className="w-6 h-6 sm:w-10 sm:h-10" />,
       delay: '6s',
-      position: 'bottom-[40%] left-[10%] sm:bottom-[4%] sm:left-[25%]',
+      position: 'bottom-[45%] left-[4%] sm:bottom-[4%] sm:left-[25%]',
       bgColor: 'bg-white/70 dark:bg-gray-800/70'
     },
     {
