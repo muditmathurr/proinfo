@@ -1,6 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Shield, Award, Clock, Star } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
+
+const useCountUp = (end: number, duration: number = 2000, start: number = 0) => {
+  const [count, setCount] = useState(start);
+
+  useEffect(() => {
+    let startTime: number | null = null;
+    let animationFrame: number;
+
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      const currentCount = Math.floor(progress * (end - start) + start);
+      setCount(currentCount);
+
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+
+    return () => {
+      cancelAnimationFrame(animationFrame);
+    };
+  }, [end, duration, start]);
+
+  return count;
+};
 
 interface StatProps {
   icon: React.ReactNode;
@@ -11,6 +39,8 @@ interface StatProps {
 
 const Stat: React.FC<StatProps> = ({ icon, value, label, delay }) => {
   const { ref, inView } = useInView({ threshold: 0.1 });
+  const numericValue = parseInt(value.replace(/[^0-9]/g, ''));
+  const count = useCountUp(numericValue, 2000, 0);
 
   return (
     <div
@@ -22,7 +52,9 @@ const Stat: React.FC<StatProps> = ({ icon, value, label, delay }) => {
       <div className="w-16 h-16 bg-[#2a2930] dark:bg-purple-900/30 rounded-full flex items-center justify-center text-[#FB8C00] dark:text-[#FB8C00] mb-4">
         {icon}
       </div>
-      <span className="text-3xl font-bold mb-2">{value}</span>
+      <span className="text-3xl font-bold mb-2">
+        {value.includes('+') ? `${count}+` : value.includes('%') ? `${count}%` : count}
+      </span>
       <span className="text-gray-600 dark:text-gray-300 text-sm">{label}</span>
     </div>
   );
@@ -41,14 +73,14 @@ const AboutSection: React.FC = () => {
     },
     {
       icon: <Award size={32} />,
-      value: '99.9%',
+      value: '99%',
       label: 'Success Rate',
       delay: 200
     },
     {
       icon: <Clock size={32} />,
-      value: '24/7',
-      label: 'Support',
+      value: '98%',
+      label: 'Customer Satisation',
       delay: 300
     },
     {
