@@ -34,37 +34,26 @@ const Navbar: React.FC = () => {
     <nav className={`w-full flex justify-center items-center py-4 fixed top-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-md' : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4 flex items-center justify-between md:justify-center">
+      <div className="container mx-auto px-4 flex items-center justify-between md:justify-between">
         {/* Logo - Visible on both mobile and desktop */}
-        <a href="#" className="md:hidden">
+        <a href="#" className="flex-shrink-0">
           <img
             fetchPriority="high"
             width="1165" 
             height="282"
             src="https://proinfo.io/wp-content/uploads/2024/01/proinfo-logo-hori.png"
-            className="w-[120px]"
+            className="w-[120px] md:w-[200px]"
             alt="Logo"
           />
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center">
-          {/* Logo */}
+        <div className="hidden md:flex items-center justify-center flex-1">
           <div
             className={`flex items-center px-2 py-1 rounded-full shadow-md transition-colors duration-300 ${
               isDark ? 'bg-gray-900' : 'bg-white'
             }`}
           >
-            <a href="#" className="mr-8">
-              <img
-                fetchPriority="high"
-                width="1165"
-                height="282"
-                src="https://proinfo.io/wp-content/uploads/2024/01/proinfo-logo-hori.png"
-                className="w-[120px] sm:w-[150px] md:w-[200px]"
-                alt="Logo"
-              />
-            </a>
             {navTabs.map((tab) => {
               const Icon = tab.icon;
               const isActive = activeTab === tab.label;
@@ -101,7 +90,7 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="flex items-center space-x-4 md:hidden absolute right-4">
+        <div className="flex items-center space-x-4 md:hidden">
           <button
             onClick={toggleTheme}
             className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
