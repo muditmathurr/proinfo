@@ -20,14 +20,49 @@ const HeroSection = () => {
 
   // Animated icons data
   const animatedIcons = [
-    { Icon: AppWindow, delay: '0.5s', position: 'top-[10%] right-[15%] sm:top-[15%] sm:right-[20%]', bgColor: 'bg-white/70 dark:bg-gray-800/70' },
-    { Icon: Cloud, delay: '1s', position: 'top-[30%] left-[5%] sm:top-[35%] sm:left-[18%]', bgColor: 'bg-white/70 dark:bg-gray-800/70' },
-    { Icon: Database, delay: '1.5s', position: 'top-[43%] right-[8%] sm:top-[47%] sm:right-[22%]', bgColor: 'bg-white/70 dark:bg-gray-800/70' },
-    { Icon: Cpu, delay: '2s', position: 'bottom-[40%] left-[3%] sm:bottom-[30%] sm:left-[22%]', bgColor: 'bg-white/70 dark:bg-gray-800/70' },
-    { Icon: Code, delay: '2.5s', position: 'top-[70%] right-[18%] sm:top-[70%] sm:right-[26%]', bgColor: 'bg-white/70 dark:bg-gray-800/70' },
-    { Icon: Zap, delay: '3s', position: 'top-[16%] left-[20%] sm:top-[15%] sm:left-[40%]', bgColor: 'bg-white/70 dark:bg-gray-800/70' },
-    { Icon: Rocket, delay: '3.5s', position: 'bottom-[20%] left-[30%] sm:bottom-[15%] sm:left-[50%]', bgColor: 'bg-white/70 dark:bg-gray-800/70' },
    
+    { 
+      Icon: () => <img src="https://cdn-icons-png.flaticon.com/512/9382/9382645.png" alt="Blockchain" className="w-8 h-8 sm:w-10 sm:h-10" />,
+      delay: '4s',
+      position: 'bottom-[25%] right-[20%] sm:bottom-[10%] sm:right-[35%]',
+      bgColor: 'bg-white/70 dark:bg-gray-800/70'
+    },
+    {
+      Icon: () => <img src="https://cdn-icons-png.flaticon.com/512/2906/2906220.png" alt="Database Storage" className="w-6 h-6 sm:w-10 sm:h-10" />,
+      delay: '4.5s', 
+      position: 'top-[15%] right-[12%] sm:top-[15%] sm:right-[30%]',
+      bgColor: 'bg-white/70 dark:bg-gray-800/70'
+    },
+    {
+      Icon: () => <img src="https://cdn-icons-png.flaticon.com/512/2906/2906274.png" alt="Cloud Storage" className="w-6 h-6 sm:w-10 sm:h-10" />,
+      delay: '5s',
+      position: 'bottom-[20%] left-[10%] sm:bottom-[35%] sm:left-[12%]', 
+      bgColor: 'bg-white/70 dark:bg-gray-800/70'
+    },
+    {
+      Icon: () => <img src="https://cdn-icons-png.flaticon.com/512/11125/11125966.png" alt="Quality Assurance" className="w-8 h-8 sm:w-10 sm:h-10" />,
+      delay: '5.5s',
+      position: 'top-[20%] left-[15%] sm:top-[15%] sm:left-[25%]',
+      bgColor: 'bg-white/70 dark:bg-gray-800/70'
+    },
+    {
+      Icon: () => <img src="https://cdn-icons-png.flaticon.com/512/9692/9692936.png" alt="Cloud Services" className="w-6 h-6 sm:w-10 sm:h-10" />,
+      delay: '6s',
+      position: 'bottom-[40%] left-[10%] sm:bottom-[4%] sm:left-[25%]',
+      bgColor: 'bg-white/70 dark:bg-gray-800/70'
+    },
+    {
+      Icon: () => <img src="https://cdn-icons-png.flaticon.com/512/15175/15175845.png" alt="Consulting" className="w-6 h-6 sm:w-10 sm:h-10" />,
+      delay: '6.5s',
+      position: 'top-[50%] right-[3%] sm:top-[30%] sm:right-[10%]',
+      bgColor: 'bg-white/70 dark:bg-gray-800/70'
+    },
+    {
+      Icon: () => <img src="https://cdn-icons-png.flaticon.com/512/9381/9381838.png" alt="No Code" className="w-8 h-8 sm:w-10 sm:h-10" />,
+      delay: '7s',
+      position: 'top-[10%] right-[40%] sm:bottom-[25%] sm:right-[14%]',
+      bgColor: 'bg-white/70 dark:bg-gray-800/70'
+    }
   ];
   
   return (
