@@ -102,7 +102,7 @@ const Navbar: React.FC = () => {
                   <a
                     href={tab.href}
                     onClick={(e) => handleNavigation(e, tab)}
-                    className={`flex flex-col items-center px-6 py-2 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#FB8C00] cursor-pointer ${
+                    className={`flex flex-col items-center px-6 py-2 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#FB8C00] cursor-pointer mx-1 ${
                       isActive
                         ? isDark
                           ? 'bg-gray-800 text-white'
