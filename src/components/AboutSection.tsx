@@ -2,10 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { Shield, Award, Clock, Star } from 'lucide-react';
 import { useInView } from '../hooks/useInView';
 
-const useCountUp = (end: number, duration: number = 2000, start: number = 0) => {
+const useCountUp = (end: number, duration: number = 2000, start: number = 0, inView: boolean) => {
   const [count, setCount] = useState(start);
 
   useEffect(() => {
+    if (!inView) {
+      setCount(start);
+      return;
+    }
+
     let startTime: number | null = null;
     let animationFrame: number;
 
@@ -25,7 +30,7 @@ const useCountUp = (end: number, duration: number = 2000, start: number = 0) => 
     return () => {
       cancelAnimationFrame(animationFrame);
     };
-  }, [end, duration, start]);
+  }, [end, duration, start, inView]);
 
   return count;
 };
@@ -40,7 +45,7 @@ interface StatProps {
 const Stat: React.FC<StatProps> = ({ icon, value, label, delay }) => {
   const { ref, inView } = useInView({ threshold: 0.1 });
   const numericValue = parseInt(value.replace(/[^0-9]/g, ''));
-  const count = useCountUp(numericValue, 2000, 0);
+  const count = useCountUp(numericValue, 2000, 0, inView);
 
   return (
     <div

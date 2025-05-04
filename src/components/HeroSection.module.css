@@ -1,25 +1,26 @@
 .heroBackground {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
   position: relative;
-  height: 100vh;
-  background: linear-gradient(90deg, #cc964f,#aca49c);
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .sliderThumb {
   position: absolute;
-  left: 0;
   top: 0;
-  width: 50%;
+  left: 0;
+  width: 100%;
   height: 100%;
-  z-index: 0;
+  background: radial-gradient(circle at center, rgba(251, 140, 0, 0.1) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .sliderThumb::before {
   position: absolute;
   content: "";
-  left: 30%;
-  top: 20%;
-  width: 450px;
-  height: 450px;
+  left: 25%;
+  top: 30%;
+  width: 350px;
+  height: 300px;
   background: #17141d;
   border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
   will-change: border-radius, transform, opacity;
@@ -45,4 +46,20 @@
     border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
     transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
   }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 } 
