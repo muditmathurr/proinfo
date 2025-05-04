@@ -54,7 +54,7 @@ const Stat: React.FC<StatProps> = ({ icon, value, label, delay }) => {
         }`}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className="w-16 h-16 bg-[#2a2930] dark:bg-purple-900/30 rounded-full flex items-center justify-center text-[#FB8C00] dark:text-[#FB8C00] mb-4">
+      <div className="w-16 h-16 bg-[#f8851a48] dark:bg-purple-900/30 rounded-full flex items-center justify-center text-[#FB8C00] dark:text-[#FB8C00] mb-4">
         {icon}
       </div>
       <span className="text-3xl font-bold mb-2">

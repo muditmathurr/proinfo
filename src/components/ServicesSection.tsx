@@ -22,7 +22,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, del
       }`}
       style={{ transitionDelay: `${delay}ms` }}
     >
-      <div className="w-16 h-16 mb-6 bg-gray-900 dark:bg-gradient-to-br from-purple-500/20 to-teal-500/20 rounded-2xl flex items-center justify-center text-[#FB8C00] dark:text-[#FB8C00] group-hover:from-purple-500/30 group-hover:to-teal-500/30 transition-all duration-300">
+  
+      <div className="w-16 h-16 mb-6 bg-[#f8851a48] dark:bg-gradient-to-br from-purple-500/20 to-teal-500/20 rounded-2xl flex items-center justify-center text-[#FB8C00] dark:text-[#FB8C00] group-hover:from-purple-500/30 group-hover:to-teal-500/30 transition-all duration-300">
         {icon}
       </div>
       <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">{title}</h3>
